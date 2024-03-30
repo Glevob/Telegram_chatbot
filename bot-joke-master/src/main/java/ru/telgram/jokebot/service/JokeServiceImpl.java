@@ -40,6 +40,7 @@ public class JokeServiceImpl implements JokeService {
         return false;
     }
 
+    @Override
     public void updateJoke(Joke joke) {
         Optional<Joke> existingJokeOptional = jokesRepository.findById(joke.getId());
         if (existingJokeOptional.isPresent()) {
